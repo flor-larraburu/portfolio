@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #fff;
     color: #333;
@@ -20,7 +20,7 @@ body {
 
 /* Estilos del encabezado */
 .header {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 20px 0;
     position: fixed;
@@ -32,6 +32,7 @@ body {
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
+    color: #FFD733; /* Color amarillo */
 }
 
 .navbar {
@@ -75,75 +76,37 @@ body {
 
 .home-section {
     padding: 120px 0;
-    background-color: #FFD733;
+    background-color: rgba(51, 255, 202, 0.2); /* Fondo azul semi-transparente */
     color: #333;
 }
 
 .photo-section {
     padding: 80px 0;
-    background-color: #33FFCA;
+    background-color: #fff; /* Fondo blanco para la sección de fotografía */
     color: #333;
 }
 
 .research-section {
     padding: 80px 0;
-    background-color: #333;
-    color: #fff;
+    background-color: rgba(255, 215, 51, 0.2); /* Fondo amarillo semi-transparente */
+    color: #333;
 }
 
 .software-section {
     padding: 80px 0;
-    background-color: #FFD733;
+    background-color: rgba(51, 255, 202, 0.2); /* Fondo azul semi-transparente */
     color: #333;
 }
 
 .writing-section {
     padding: 80px 0;
-    background-color: #33FFCA;
+    background-color: #fff; /* Fondo blanco */
     color: #333;
-}
-
-/* Estilos del carrusel de imágenes */
-.carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin-top: 20px;
-}
-
-.carousel img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    margin: 0 10px;
-    transition: transform 0.5s ease;
-}
-
-.symbols {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.symbol {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 10px;
-    margin: 0 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.symbol:hover {
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Estilos del pie de página */
 .footer {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -154,6 +117,26 @@ body {
 
 .footer p {
     margin: 0;
+}
+
+/* Estilos de la cuadrícula de Instagram */
+.instagram-feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    justify-items: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.grid-item img:hover {
+    transform: scale(1.05);
 }
 
 /* Estilos para íconos de Font Awesome */
