@@ -1,35 +1,30 @@
+// Espera a que el documento HTML esté completamente cargado
 document.addEventListener("DOMContentLoaded", function () {
-  const carousel = document.querySelector(".carousel");
-  const images = carousel.querySelectorAll("img");
-  const symbols = document.querySelectorAll(".symbol");
+  // Obtiene todos los enlaces de la barra de navegación
+  const navLinks = document.querySelectorAll(".navbar ul li a");
 
-  let index = 0;
-  const totalImages = images.length;
+  // Itera sobre cada enlace y agrega un evento de clic suave para desplazarse
+  navLinks.forEach(function (navLink) {
+    navLink.addEventListener("click", function (event) {
+      event.preventDefault(); // Evita el comportamiento predeterminado del enlace
 
-  function showImage() {
-    images.forEach((img) => (img.style.display = "none"));
-    images[index].style.display = "block";
-  }
+      // Obtiene el valor del atributo href del enlace clicado
+      const targetId = this.getAttribute("href").substring(1); // Elimina el "#" del inicio
 
-  function nextImage() {
-    index = (index + 1) % totalImages;
-    showImage();
-  }
+      // Encuentra el elemento con el id correspondiente en el documento
+      const targetElement = document.getElementById(targetId);
 
-  function prevImage() {
-    index = (index - 1 + totalImages) % totalImages;
-    showImage();
-  }
+      // Verifica si el elemento existe en el documento
+      if (targetElement) {
+        // Calcula la posición del elemento en relación con la parte superior de la página
+        const targetPosition = targetElement.offsetTop;
 
-  symbols.forEach((symbol) => {
-    symbol.addEventListener("click", function () {
-      if (this.classList.contains("prev")) {
-        prevImage();
-      } else if (this.classList.contains("next")) {
-        nextImage();
+        // Realiza un desplazamiento suave hasta la posición del elemento
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
       }
     });
   });
-
-  showImage(); // Mostrar la primera imagen al cargar la página
 });
