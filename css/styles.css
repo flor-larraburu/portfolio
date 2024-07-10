@@ -1,136 +1,163 @@
+/* Reset y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
+    background-color: #fff;
     color: #333;
 }
 
-header {
-    background: #333;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos del encabezado */
+.header {
+    background-color: #333;
     color: #fff;
-    padding: 1em 0;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar {
+    text-align: right;
+}
+
+.navbar ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
+    margin-top: 10px;
 }
 
-nav ul li {
-    margin: 0 1em;
+.navbar ul li {
+    display: inline-block;
+    margin-left: 20px;
 }
 
-nav ul li a {
+.navbar ul li a {
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #f0db4f;
+.navbar ul li a:hover {
+    color: #FFD733;
 }
 
-section {
-    padding: 2em 0;
+/* Estilos de las secciones */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
     text-align: center;
 }
 
-h1, h2 {
-    color: #4caf50;
-}
-
-p {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#home {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 4em 0;
-    transition: background-color 0.5s;
-}
-
-#photography {
-    background-color: #ffffff;
-    color: #333;
-    transition: background-color 0.5s;
-}
-
-#research {
-    background-color: #f0db4f;
-    color: #333;
-    transition: background-color 0.5s;
-}
-
-#software {
-    background-color: #4caf50;
-    color: #fff;
-    transition: background-color 0.5s;
-}
-
-#writing {
-    background-color: #ffffff;
-    color: #333;
-    transition: background-color 0.5s;
-}
-
-footer {
-    background: #333;
-    color: #fff;
+.section-description {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
     text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
-/* Estilos para el carrusel de imágenes */
+.home-section {
+    padding: 120px 0;
+    background-color: #FFD733;
+    color: #333;
+}
 
+.photo-section {
+    padding: 80px 0;
+    background-color: #33FFCA;
+    color: #333;
+}
+
+.research-section {
+    padding: 80px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+.software-section {
+    padding: 80px 0;
+    background-color: #FFD733;
+    color: #333;
+}
+
+.writing-section {
+    padding: 80px 0;
+    background-color: #33FFCA;
+    color: #333;
+}
+
+/* Estilos del carrusel de imágenes */
 .carousel {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-top: 1em;
-    position: relative;
+    margin-top: 20px;
 }
 
 .carousel img {
-    width: auto;
     max-width: 100%;
     height: auto;
-    max-height: 300px;
     object-fit: cover;
-    margin: 0 1em;
+    margin: 0 10px;
     transition: transform 0.5s ease;
 }
 
-.carousel .symbols {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
+.symbols {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    margin-top: 10px;
 }
 
-.carousel .symbols .symbol {
-    color: #fff;
+.symbol {
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 0.5em;
-    font-size: 1.5em;
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-.carousel .symbols .symbol:hover {
+.symbol:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos del pie de página */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Estilos para íconos de Font Awesome */
+.fa-chevron-left, .fa-chevron-right {
+    font-size: 1.5rem;
 }
 

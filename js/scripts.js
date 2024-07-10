@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   symbols.forEach((symbol) => {
     symbol.addEventListener("click", function () {
-      if (this.classList.contains("symbol-left")) {
+      if (this.classList.contains("prev")) {
         prevImage();
-      } else if (this.classList.contains("symbol-right")) {
+      } else if (this.classList.contains("next")) {
         nextImage();
       }
     });

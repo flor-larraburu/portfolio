@@ -5,59 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#photography">Fotografía y Video</a></li>
-          <li><a href="#research">Investigación</a></li>
-          <li><a href="#software">Desarrollo de Software</a></li>
-          <li><a href="#writing">Escritor</a></li>
-        </ul>
-      </nav>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">Tu Nombre</h1>
+        <nav class="navbar">
+          <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#photography">Fotografía y Video</a></li>
+            <li><a href="#research">Investigación</a></li>
+            <li><a href="#software">Desarrollo de Software</a></li>
+            <li><a href="#writing">Escritor</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <section id="home">
-      <h1>Bienvenido a Mi Portafolio</h1>
-      <p>
-        Me llamo [Tu Nombre] y soy fotógrafo, investigador, desarrollador de
-        software y escritor.
-      </p>
-    </section>
-
-    <section id="photography">
-      <h2>Fotografía y Video</h2>
-      <div class="carousel">
-        <img src="images/foto1.jpg" alt="Foto 1" />
-        <img src="images/foto2.jpg" alt="Foto 2" />
-        <img src="images/foto3.jpg" alt="Foto 3" />
-        <!-- Añade más imágenes según sea necesario -->
-      </div>
-      <div class="symbols">
-        <span class="symbol">&larr;</span>
-        <span class="symbol">&rarr;</span>
+    <section id="home" class="home-section">
+      <div class="container">
+        <h1 class="section-title">Bienvenido a Mi Portafolio</h1>
+        <p class="section-description">
+          Soy fotógrafo, investigador, desarrollador de software y escritor.
+        </p>
       </div>
     </section>
 
-    <section id="research">
-      <h2>Investigación</h2>
-      <p>Explora mis publicaciones académicas y proyectos de investigación.</p>
+    <section id="photography" class="photo-section">
+      <div class="container">
+        <h2 class="section-title">Fotografía y Video</h2>
+        <div class="carousel">
+          <img src="images/foto1.jpg" alt="Foto 1" />
+          <img src="images/foto2.jpg" alt="Foto 2" />
+          <img src="images/foto3.jpg" alt="Foto 3" />
+          <!-- Añade más imágenes según sea necesario -->
+        </div>
+        <div class="symbols">
+          <span class="symbol prev"><i class="fas fa-chevron-left"></i></span>
+          <span class="symbol next"><i class="fas fa-chevron-right"></i></span>
+        </div>
+      </div>
     </section>
 
-    <section id="software">
-      <h2>Desarrollo de Software</h2>
-      <p>Aquí puedes ver mis proyectos de desarrollo de software.</p>
+    <section id="research" class="research-section">
+      <div class="container">
+        <h2 class="section-title">Investigación</h2>
+        <p class="section-description">
+          Explora mis publicaciones académicas y proyectos de investigación.
+        </p>
+      </div>
     </section>
 
-    <section id="writing">
-      <h2>Escritor</h2>
-      <p>Lee algunos de mis escritos y artículos.</p>
+    <section id="software" class="software-section">
+      <div class="container">
+        <h2 class="section-title">Desarrollo de Software</h2>
+        <p class="section-description">
+          Aquí puedes ver mis proyectos de desarrollo de software.
+        </p>
+      </div>
     </section>
 
-    <footer>
-      <p>&copy; 2024 [Tu Nombre]. Todos los derechos reservados.</p>
+    <section id="writing" class="writing-section">
+      <div class="container">
+        <h2 class="section-title">Escritor</h2>
+        <p class="section-description">
+          Lee algunos de mis escritos y artículos.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 [Tu Nombre]. Todos los derechos reservados.</p>
+      </div>
     </footer>
 
     <script src="js/scripts.js"></script>
