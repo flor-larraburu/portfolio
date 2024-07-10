@@ -1,15 +1,35 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll("nav ul li a");
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.querySelector(".carousel");
+  const images = carousel.querySelectorAll("img");
+  const symbols = document.querySelectorAll(".symbol");
 
-  navLinks.forEach((link) => {
-    link.addEventListener("click", smoothScroll);
+  let index = 0;
+  const totalImages = images.length;
+
+  function showImage() {
+    images.forEach((img) => (img.style.display = "none"));
+    images[index].style.display = "block";
+  }
+
+  function nextImage() {
+    index = (index + 1) % totalImages;
+    showImage();
+  }
+
+  function prevImage() {
+    index = (index - 1 + totalImages) % totalImages;
+    showImage();
+  }
+
+  symbols.forEach((symbol) => {
+    symbol.addEventListener("click", function () {
+      if (this.classList.contains("symbol-left")) {
+        prevImage();
+      } else if (this.classList.contains("symbol-right")) {
+        nextImage();
+      }
+    });
   });
 
-  function smoothScroll(e) {
-    e.preventDefault();
-    const targetId = e.currentTarget.getAttribute("href");
-    document.querySelector(targetId).scrollIntoView({
-      behavior: "smooth",
-    });
-  }
+  showImage(); // Mostrar la primera imagen al cargar la página
 });
